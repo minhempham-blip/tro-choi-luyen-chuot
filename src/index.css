@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .text-stroke-white-2 {
+    -webkit-text-stroke: 2.5px white;
+    paint-order: stroke fill;
+  }
+  .text-stroke-white-4 {
+    -webkit-text-stroke: 4px white;
+    paint-order: stroke fill;
+  }
+  .text-stroke-blue-2 {
+    -webkit-text-stroke: 2px #1e40af;
+    paint-order: stroke fill;
+  }
+  .wood-board-pattern {
+    background-color: #fefce8;
+    background-image: 
+      radial-gradient(#fef08a 1px, transparent 1px),
+      radial-gradient(#fef9c3 1px, #fefce8 1px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
+  .candy-stripe-border {
+    border: 12px solid #fda4af;
+    border-image: repeating-linear-gradient(
+      -45deg,
+      #f43f5e,
+      #f43f5e 14px,
+      #fbcfe8 14px,
+      #fbcfe8 28px
+    ) 14;
+  }
+}
+
+@keyframes bounce-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  50% { transform: scale(1.15); opacity: 0.3; }
+  100% { transform: scale(0.95); opacity: 0.8; }
+}
+
+.animate-bounce-gentle {
+  animation: bounce-gentle 2.5s ease-in-out infinite;
+}
+
+.animate-wiggle {
+  animation: wiggle 1.8s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

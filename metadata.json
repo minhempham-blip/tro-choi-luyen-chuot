@@ -1,0 +1,6 @@
+{
+  "name": "NHANH TAY LẸ MẮT – Luyện thao tác chuột",
+  "description": "Trò chơi giáo dục luyện kỹ năng chuột máy tính cho học sinh tiểu học: di chuột, nháy chuột, nháy đúp, nháy phải, kéo thả, cuộn con lăn với 20 bài tập sinh động.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
